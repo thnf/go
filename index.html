@@ -34,7 +34,7 @@
             }else{
             	mdui.snackbar('<font color="red">检查链接中</font>'+url+'请稍等');
 // 使用 jQuery.get() 发起 GET 请求
-$.get('https://api.bpuxi.top/ifame.php?url='+url, function(data) {
+$.get('https://api.bpuxi.top/iframe.php?url='+url, function(data) {
   // 在成功回调函数中对返回的内容进行操
 if(data=="true"){
 window.location = url;
