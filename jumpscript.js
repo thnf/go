@@ -163,7 +163,7 @@ function checkMailAddress(v) {
     }
 }
 
-
+/*
 $('#exit_login').click(function() {
     var exitLogin = confirm('浣犵湡鐨勮閫€鍑虹櫥褰曞悧锛�');
     if (exitLogin) {
@@ -226,4 +226,4 @@ fetch('http://ovooa.com/API/rl/api.php')
                 style.innerText = "HTML{-webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: url(data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id=鈥� 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale);-webkit-filter: grey;filter: gray;}";
             }
         }
-    })
+    })*/
