@@ -40,8 +40,8 @@ if(data=="true"){
 window.location = url;
 }
   else{
+      mdui.alert(url+'不符合相关规定,请允许此窗口在新标签页打开。');
     var form = document.createElement("form");
-
 // 设置 form 的属性
 form.action = url;
 form.method = "GET";
