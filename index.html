@@ -40,7 +40,18 @@ if(data=="true"){
 window.location = url;
 }
   else{
-   window.open(url, "_blank");
+    var form = document.createElement("form");
+
+// 设置 form 的属性
+form.action = url;
+form.method = "GET";
+form.target= "_blank";
+
+// 添加 form 到文档中
+document.body.appendChild(form);
+// 提交表单以进行跳转
+form.submit();
+
   }
 });
             }
