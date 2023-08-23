@@ -38,6 +38,7 @@ $.get('https://api.bpuxi.top/iframe.php?url='+url, function(data) {
   // 在成功回调函数中对返回的内容进行操
 if(data=="true"){
 window.location = url;
+    return;
 }
   else{
       mdui.alert(url+'不符合相关规定,请允许此窗口在新标签页打开。');
@@ -46,12 +47,11 @@ window.location = url;
 form.action = url;
 form.method = "GET";
 form.target= "_blank";
-
 // 添加 form 到文档中
 document.body.appendChild(form);
 // 提交表单以进行跳转
 form.submit();
-
+return;
   }
 });
                 setTimeout(function() {
