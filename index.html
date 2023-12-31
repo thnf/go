@@ -25,7 +25,7 @@
         </div> 
         <script src="/jumpscript.js"></script> 
         <script>
-            var url = getRequestParam('url');
+            var url = window.location.hash.substring(1);
             if(!url){
                 mdui.alert('跳转参数错误！');
             	setTimeout(function(){
