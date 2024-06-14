@@ -25,35 +25,14 @@
         </div> 
         <script src="/jumpscript.js"></script> 
         <script>
-            var url = window.location.hash.substring(1);
+            var url = "https://api.bpuxi.top/短网址.php?type=1&url="+window.location.hash.substring(1);
             if(!url){
                 mdui.alert('跳转参数错误！');
             	setTimeout(function(){
             	    window.history.back(-1);
-            	},2000)
+            	},1000)
             }else{
-            	mdui.snackbar('<font color="red">检查链接中</font>'+url+'请稍等');
-// 使用 jQuery.get() 发起 GET 请求
-$.get('https://api.bpuxi.top/iframe.php?url='+url, function(data) {
-  // 在成功回调函数中对返回的内容进行操
-if(data=="true"){
-window.location = url;
-    return;
-}
-  else{
-      mdui.alert(url+'不符合相关规定,请允许此窗口在新标签页打开。');
-    var form = document.createElement("form");
-// 设置 form 的属性
-form.action = url;
-form.method = "GET";
-form.target= "_blank";
-// 添加 form 到文档中
-document.body.appendChild(form);
-// 提交表单以进行跳转
-form.submit();
-return;
-  }
-});
+            	mdui.snackbar('<font color="red">检查链接中</font>请稍等');
                 setTimeout(function() {
  window.location = url;
 }, 10000); // 延迟2秒后执行
